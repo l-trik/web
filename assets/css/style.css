@@ -116,15 +116,13 @@ h1, h2, h3, h4, h5, h6 {
 --------------------------------------------------------------*/
 /* Desktop Navigation */
 .nav-menu, .nav-menu * {
-    margin: 0;
-    padding: 0;
     list-style: none;
 }
 
 .nav-menu > ul > li {
     position: relative;
     white-space: nowrap;
-    float: left;
+    float: right;
 }
 
 .nav-menu a {
@@ -137,8 +135,13 @@ h1, h2, h3, h4, h5, h6 {
     font-family: "Poppins", sans-serif;
 }
 
-.nav-menu a:hover, .nav-menu .active > a, .nav-menu li:hover > a {
+.nav-menu .active > a{
     color: #009fe9;
+    text-decoration: none;
+}
+
+.nav-menu a:hover, .nav-menu li:hover > a {
+    color: #d36300;
     text-decoration: none;
 }
 
