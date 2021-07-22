@@ -337,9 +337,6 @@ h1, h2, h3, h4, h5, h6 {
     background-color: rgba(59, 59, 59, 0.8);
     overflow: hidden;
     padding: 0;
-    /*margin-bottom: -120px;
-
-     */
     position: relative;
     z-index: 1;
 }
@@ -489,15 +486,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .zoom{
-    /* Aumentamos la anchura y altura durante 2 segundos */
     transition:  transform 0.5s;
 }
+
 .zoom:hover{
-    /* tranformamos el elemento al pasar el mouse por encima al doble de
-       su tamaño con scale(2). */
     transform : scale(1.05);
 }
-
 
 .services .icon-box i {
     float: left;
@@ -558,7 +552,6 @@ section {
     margin-bottom: 0;
     font-style: italic;
 }
-
 
 @media (max-height: 768px), (max-width: 1200px) {
     #hero {
