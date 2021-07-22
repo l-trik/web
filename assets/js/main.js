@@ -97,7 +97,6 @@
         (index === 0) ?
             heroCarouselIndicators.append("<li data-target='#heroCarousel' data-slide-to='" + index + "' class='active'></li>"):
             heroCarouselIndicators.append("<li data-target='#heroCarousel' data-slide-to='" + index + "'></li>");
-
     });
 
     heroCarousel.on('slid.bs.carousel', function(e) {
@@ -113,7 +112,11 @@
             $('.back-to-top').fadeOut('slow');
         }
     });
-
+    // jQuery counterUp
+    $('[data-toggle="counter-up"]').counterUp({
+        delay: 10,
+        time: 1000
+    });
     // Init AOS
     function aos_init() {
         AOS.init({

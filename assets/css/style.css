@@ -481,8 +481,94 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /*--------------------------------------------------------------
+# About Us
+--------------------------------------------------------------*/
+.about .image {
+    padding: 20px;
+    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+}
+
+.about .content h3 {
+    font-weight: 600;
+    font-size: 26px;
+}
+
+.about .content ul {
+    list-style: none;
+    padding: 0;
+}
+
+.about .content ul li {
+    padding-bottom: 10px;
+    display: flex;
+    align-items: flex-start;
+}
+
+.about .content ul i {
+    font-size: 24px;
+    padding: 2px 6px 0 0;
+    color: #7cc576;
+}
+
+.about .content p:last-child {
+    margin-bottom: 0;
+}
+/*--------------------------------------------------------------
+# Facts
+--------------------------------------------------------------*/
+.facts {
+    padding-bottom: 0px;
+}
+
+.facts .count-box {
+    padding: 30px;
+    width: 100%;
+}
+
+.facts .count-box i {
+    display: block;
+    font-size: 44px;
+    color: #d36300;
+    float: left;
+}
+
+.facts .count-box span {
+    font-size: 48px;
+    line-height: 40px;
+    display: block;
+    font-weight: 700;
+    color: #149ddd;
+    margin-left: 60px;
+}
+
+.facts .count-box p {
+    padding: 15px 0 0 0;
+    margin: 0 0 0 60px;
+    font-family: "Raleway", sans-serif;
+    font-size: 14px;
+    color: #122f57;
+}
+
+.facts .count-box a {
+    font-weight: 600;
+    display: block;
+    margin-top: 20px;
+    color: #122f57;
+    font-size: 15px;
+    font-family: "Poppins", sans-serif;
+    transition: ease-in-out 0.3s;
+}
+
+.facts .count-box a:hover {
+    color: #1f5297;
+}
+
+/*--------------------------------------------------------------
 # Services
 --------------------------------------------------------------*/
+.services{
+    background-color: #f4f8fb
+}
 .services .icon-box {
     margin-bottom: 20px;
     padding: 50px 40px;
