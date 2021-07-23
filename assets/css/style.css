@@ -599,7 +599,9 @@ h1, h2, h3, h4, h5, h6 {
 --------------------------------------------------------------*/
 
 .services{
-    background-color: #f4f8fb
+    background-color: #f4f8fb;
+    margin-top: 80px;
+    margin-bottom: 80px;
 }
 .services .icon-box {
     margin-bottom: 20px;
@@ -683,6 +685,7 @@ section {
 --------------------------------------------------------------*/
 .contact {
     position: relative;
+    margin-top: 20px;
 }
 
 .contact:before {
