@@ -2,14 +2,14 @@ jQuery(document).ready(function($) {
   "use strict";
 
   //Contact
-  $('form.php-email-form').submit(function() {
-   
+  $('form.php-email-form').submit(function(e) {
+    e.preventDefault()
     var f = $(this).find('.form-group'),
       ferror = false,
       emailExp = /^[^\s()<>@,;:\/]+@\w[\w\.-]+\.[a-z]{2,}$/i;
 
     f.children('input').each(function() { // run all inputs
-     
+
       var i = $(this); // current input
       var rule = i.attr('data-rule');
 
@@ -89,26 +89,28 @@ jQuery(document).ready(function($) {
         i.next('.validate').html((ierror ? (i.attr('data-msg') != undefined ? i.attr('data-msg') : 'wrong Input') : '')).show('blind');
       }
     });
+    let arrayForm = {}
     if (ferror) return false;
-    else var str = $(this).serialize();
+    else arrayForm = $(this).serializeArray();
+
+    let formObject = {};
+    for (const dataField of arrayForm) {
+      formObject[dataField["name"]] = dataField["value"]
+    }
+    console.log(formObject)
 
     var this_form = $(this);
-    var action = $(this).attr('action');
 
-    if( ! action ) {
-      this_form.find('.loading').slideUp();
-      this_form.find('.error-message').slideDown().html('The form action property is not set!');
-      return false;
-    }
-    
     this_form.find('.sent-message').slideUp();
     this_form.find('.error-message').slideUp();
     this_form.find('.loading').slideDown();
     
     $.ajax({
       type: "POST",
-      url: action,
-      data: str,
+      url: 'http://localhost:8080',
+      dataType: 'json',
+      contentType: 'application/json',
+      data: JSON.stringify(formObject),
       success: function(msg) {
         if (msg == 'OK') {
           this_form.find('.loading').slideUp();
