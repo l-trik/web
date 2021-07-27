@@ -97,8 +97,6 @@ jQuery(document).ready(function($) {
     for (const dataField of arrayForm) {
       formObject[dataField["name"]] = dataField["value"]
     }
-    console.log(formObject)
-
     var this_form = $(this);
 
     this_form.find('.sent-message').slideUp();
